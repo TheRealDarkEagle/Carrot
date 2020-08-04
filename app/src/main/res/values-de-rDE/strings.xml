@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carrot</string>
+    <string name="tab_text_1">Empfohlen</string>
+    <string name="tab_text_2">Liste</string>
+</resources>

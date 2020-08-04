@@ -31,7 +31,7 @@ class PlaceholderFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_main, container, false)
         val textView: TextView = root.findViewById(R.id.section_label)
         pageViewModel.text.observe(this, Observer<String> {
-            textView.text = it
+            textView.text = "This is: $it"
         })
         return root
     }

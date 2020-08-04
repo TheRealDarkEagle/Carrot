@@ -4,13 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 
 class PageViewModel : ViewModel() {
 
     private val _index = MutableLiveData<Int>()
     val text: LiveData<String> = Transformations.map(_index) {
-        "Hello world from section: $it"
+        when (it) {
+            1 -> "Yeah the first"
+            2 -> "yep the second"
+            else -> "This tab does not exist"
+        }
     }
 
     fun setIndex(index: Int) {
