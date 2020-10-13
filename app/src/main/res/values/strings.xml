@@ -5,4 +5,8 @@
     <string name="recipe1">Halloumiburger</string>
     <string name="recipe2">Flammkuchen</string>
     <string name="recipe3">Nudeln mit grünem Pesto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="zuletzt_zubereitet_am">Zuletzt zubereitet am:</string>
+    <string name="todo">TODO</string>
 </resources>

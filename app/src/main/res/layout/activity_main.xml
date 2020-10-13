@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -37,76 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/recipes_list">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:padding="@dimen/appbar_padding">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/recipe1"
-                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                        android:textColor="@color/colorPrimaryDark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="@dimen/recipe_image_width"
-                            android:layout_height="@dimen/recipe_image_height"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/halloumiburger"
-                            android:contentDescription="@string/recipe1"/>
-
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="8dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Zuletzt zubereitet am: " />
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:tint="@color/colorPrimaryDark"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:tint="@color/colorPrimaryDark"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+           <!--<androidx.fragment.app.FragmentContainerView
+               android:id="@+id/recipe"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:name="de.itGarten.carrot.ui.main.Recipe"/>-->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -137,7 +76,8 @@
                             android:layout_width="@dimen/recipe_image_width"
                             android:layout_height="@dimen/recipe_image_height"
                             android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/flammkuchen" />
+                            app:srcCompat="@drawable/flammkuchen"
+                            android:contentDescription="@string/todo" />
 
                         <LinearLayout
                             android:id="@+id/linearLayout2"
@@ -149,7 +89,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zuletzt zubereitet am: " />
+                                android:text="@string/zuletzt_zubereitet_am" />
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -159,15 +99,18 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:tint="@color/colorPrimaryDark"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo" />
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -204,7 +147,8 @@
                             android:layout_width="@dimen/recipe_image_width"
                             android:layout_height="@dimen/recipe_image_height"
                             android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/nudeln_mit_pesto" />
+                            app:srcCompat="@drawable/nudeln_mit_pesto"
+                            android:contentDescription="@string/todo" />
 
                         <LinearLayout
                             android:id="@+id/linearLayout3"
@@ -216,7 +160,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zuletzt zubereitet am:" />
+                                android:text="@string/zuletzt_zubereitet_am" />
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -226,15 +170,18 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:tint="@color/colorPrimaryDark"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -271,7 +218,8 @@
                             android:layout_width="@dimen/recipe_image_width"
                             android:layout_height="@dimen/recipe_image_height"
                             android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/nudeln_mit_pesto" />
+                            app:srcCompat="@drawable/nudeln_mit_pesto"
+                            android:contentDescription="@string/todo" />
 
                         <LinearLayout
                             android:id="@+id/linearLayout4"
@@ -283,7 +231,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Zuletzt zubereitet am: " />
+                                android:text="@string/zuletzt_zubereitet_am" />
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -293,15 +241,18 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:tint="@color/colorPrimaryDark"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo"/>
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    app:srcCompat="@android:drawable/ic_menu_recent_history" />
+                                    app:srcCompat="@android:drawable/ic_menu_recent_history"
+                                    android:contentDescription="@string/todo" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>

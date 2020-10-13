@@ -6,4 +6,6 @@
     <string name="recipe1">Halloumiburger</string>
     <string name="recipe2">Flammkuchen</string>
     <string name="recipe3">Nudeln mit grünem Pesto</string>
+    <string name="zuletzt_zubereitet_am">Zuletzt zubereitet am:</string>
+    <string name="todo">TODO</string>
 </resources>
